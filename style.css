@@ -1,0 +1,515 @@
+/* ===========================================================
+   Pulse — all styling for the whole site lives in this file.
+
+   You should not need to open this file to add a gathering.
+   Everything here controls how things look; the words live in
+   the .html files.
+   =========================================================== */
+
+:root {
+  --ink: #14161f;
+  --ink-2: #1c1f2c;
+  --vellum: #ede3ce;
+  --vellum-dim: #d8cdb2;
+  --brass: #c08f3e;
+  --brass-bright: #dcab5c;
+  --ember: #b4472d;
+  --mist: #8b93a6;
+  --text-on-ink: #ece9e2;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--ink);
+  color: var(--text-on-ink);
+  font-family: 'Source Serif 4', serif;
+  font-size: 17px;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+a { color: var(--brass-bright); text-decoration: none; }
+a:hover { text-decoration: underline; }
+a:focus-visible, button:focus-visible {
+  outline: 2px solid var(--brass-bright);
+  outline-offset: 3px;
+}
+
+.wrap {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* ---------- Pulse rule: the signature device ----------
+   A horizontal divider made of ticks at beat-like, slightly
+   irregular spacing, rather than a uniform line. Used as the
+   one recurring motif throughout the page. */
+.pulse-rule {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  height: 14px;
+  margin: 48px 0;
+  overflow: hidden;
+}
+.pulse-rule span {
+  display: inline-block;
+  width: 1px;
+  background: var(--brass);
+  opacity: 0.55;
+}
+/* The ticks are drawn by pulse.js. If that script fails to load, the
+   divider would otherwise vanish and the page would lose its one
+   recurring motif — so an empty rule falls back to a plain hairline.
+   Once the script fills it, it is no longer empty and this stops
+   applying, with no flicker in between. */
+.pulse-rule:empty {
+  border-top: 1px solid var(--brass);
+  opacity: 0.35;
+  height: 1px;
+}
+
+/* ---------- Header ---------- */
+header {
+  padding: 28px 0 0;
+  border-bottom: 1px solid rgba(192,143,62,0.25);
+}
+.header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding-bottom: 20px;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.wordmark {
+  font-family: 'Fraunces', serif;
+  font-weight: 600;
+  font-size: 26px;
+  letter-spacing: 0.01em;
+  color: var(--text-on-ink);
+}
+.wordmark a { color: inherit; }
+.wordmark a:hover { text-decoration: none; }
+.wordmark em {
+  font-style: italic;
+  color: var(--brass-bright);
+  font-weight: 500;
+}
+nav {
+  display: flex;
+  gap: 22px;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 12.5px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+nav a { color: var(--mist); }
+nav a:hover { color: var(--brass-bright); }
+
+/* ---------- Hero ---------- */
+.hero { padding: 56px 0 8px; }
+.hero .eyebrow {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 12.5px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--brass-bright);
+  margin: 0 0 18px;
+}
+.hero h1 {
+  font-family: 'Fraunces', serif;
+  font-weight: 500;
+  font-size: clamp(30px, 5vw, 42px);
+  line-height: 1.25;
+  margin: 0 0 22px;
+  color: var(--text-on-ink);
+}
+.hero h1 i { color: var(--brass-bright); font-style: italic; }
+.hero p.lede {
+  font-size: 18px;
+  color: var(--mist);
+  max-width: 560px;
+  margin: 0;
+}
+.hero .meta-line {
+  margin-top: 26px;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 12.5px;
+  color: var(--mist);
+}
+.hero .meta-line b { color: var(--vellum-dim); }
+
+/* ---------- Section labels ---------- */
+.section-label {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 12.5px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--brass-bright);
+  margin: 0 0 6px;
+}
+.section-intro {
+  color: var(--mist);
+  font-size: 15.5px;
+  margin: 0 0 32px;
+  max-width: 540px;
+}
+
+/* ---------- Gathering entry ---------- */
+.gathering {
+  position: relative;
+  padding: 30px 28px 32px;
+  background: var(--vellum);
+  color: #2a2416;
+  border-radius: 3px;
+  margin-bottom: 28px;
+}
+/* stitched thread along the top edge — a bookbinding nod */
+.gathering::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 24px; right: 24px;
+  height: 1px;
+  background-image: repeating-linear-gradient(90deg, var(--ember) 0 6px, transparent 6px 12px);
+  opacity: 0.55;
+}
+.gathering .g-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 11.5px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #6b6248;
+  margin-bottom: 14px;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.gathering h2 {
+  font-family: 'Fraunces', serif;
+  font-weight: 600;
+  font-size: 24px;
+  margin: 0 0 4px;
+  color: #211c10;
+}
+.gathering h2 a { color: inherit; }
+.gathering .theme-tag {
+  font-style: italic;
+  color: var(--ember);
+  font-weight: 400;
+}
+.gathering .g-note {
+  font-size: 15px;
+  color: #4a422f;
+  margin: 12px 0 20px;
+}
+.g-note a { color: var(--ember); }
+
+/* auto-fit rather than a fixed 2 columns: a piece might have one
+   language, or five (Turkish, English, Urdu, Bangla...), and this
+   wraps to however many actually exist without hardcoding a count */
+.languages {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 22px;
+  margin-top: 6px;
+}
+/* At this column width the grid tops out at two tracks, so an odd
+   final block would otherwise sit alone in the left half with dead
+   space beside it. Let it run the full width instead: correct for a
+   single-language piece, and for the third of three. */
+.languages .lang-block:last-child:nth-child(odd) {
+  grid-column: 1 / -1;
+}
+
+.lang-block .lang-tag {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 10.5px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ember);
+  display: block;
+  margin-bottom: 8px;
+}
+/* Every language is set identically: upright, one colour, no visual
+   hierarchy between original and translation. Which language a piece
+   was written in is carried by grid order — the original is always
+   the first block — and stated plainly in the credit line. It is
+   never implied by styling, which is what the old italic was doing
+   and which could not have extended to Nastaliq or Bengali. */
+.lang-block p {
+  margin: 0;
+  font-size: 15.5px;
+  line-height: 1.75;
+  white-space: pre-line;
+  color: #211c10;
+}
+
+/* ---------- Non-Latin scripts ----------
+   These need their own rules because each script has its own
+   vertical demands; Latin leading is simply wrong for them. Note
+   they are selected on the lang attribute rather than on a class,
+   so writing lang="ur" on a block is the single thing that drives
+   both the font and the spacing — one declaration, not two kept in
+   step. Never italicise either script: a browser will fake it by
+   mechanically slanting the glyphs, which mangles Nastaliq. */
+
+/* Urdu, in Nastaliq. The glyphs cascade diagonally and carry deep
+   descenders, so lines collide at Latin leading; it needs roughly
+   double. Also set a little larger, as Nastaliq detail is fine. */
+.lang-block[lang|="ur"] p {
+  font-family: 'Noto Nastaliq Urdu', serif;
+  font-size: 17px;
+  line-height: 2.3;
+}
+
+/* Bengali. Serif, to sit with the Latin faces. Wants a little extra
+   leading for the matra (the headline stroke) and for conjuncts,
+   which stack below the baseline. */
+.lang-block[lang|="bn"] p {
+  font-family: 'Noto Serif Bengali', serif;
+  font-size: 16px;
+  line-height: 1.95;
+}
+
+/* The mono label face has no Arabic or Bengali glyphs, so these tags
+   would silently fall back to whatever the reader's system supplies.
+   Letter-spacing is removed too: in Nastaliq it severs the cursive
+   join between letters, and in Bengali it breaks the headline stroke
+   into dashes. Sized up because neither script survives 10.5px. */
+.lang-block[lang|="ur"] .lang-tag {
+  font-family: 'Noto Nastaliq Urdu', serif;
+  letter-spacing: 0;
+  font-size: 14px;
+  line-height: 1.9;
+}
+.lang-block[lang|="bn"] .lang-tag {
+  font-family: 'Noto Serif Bengali', serif;
+  letter-spacing: 0;
+  font-size: 12px;
+}
+
+/* Right-to-left is set with dir="rtl" in the HTML, on the block and
+   not on the grid — so the columns still read left to right in the
+   order written, and only the Urdu column itself flips. Alignment
+   follows from dir automatically; nothing here forces it. */
+
+.g-credit {
+  margin-top: 20px;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 12px;
+  color: #6b6248;
+}
+
+.placeholder-note {
+  display: inline-block;
+  margin-top: 14px;
+  padding: 6px 10px;
+  background: rgba(180,71,45,0.08);
+  border: 1px dashed rgba(180,71,45,0.4);
+  border-radius: 3px;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 11.5px;
+  color: var(--ember);
+}
+
+/* ---------- Objects ---------- */
+.objects-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
+@media (max-width: 560px) { .objects-grid { grid-template-columns: 1fr; } }
+
+.object-card {
+  border: 1px solid rgba(192,143,62,0.3);
+  border-radius: 3px;
+  padding: 20px;
+  background: var(--ink-2);
+}
+.object-swatch {
+  height: 120px;
+  border-radius: 2px;
+  margin-bottom: 14px;
+  background: repeating-linear-gradient(
+    135deg,
+    rgba(192,143,62,0.18) 0 10px,
+    rgba(192,143,62,0.06) 10px 20px
+  );
+  border: 1px solid rgba(192,143,62,0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 11px;
+  color: var(--mist);
+  text-align: center;
+  padding: 8px;
+}
+.object-card h3 {
+  font-family: 'Fraunces', serif;
+  font-size: 17px;
+  font-weight: 500;
+  margin: 0 0 6px;
+  color: var(--text-on-ink);
+}
+.object-card p {
+  font-size: 14px;
+  color: var(--mist);
+  margin: 0 0 12px;
+}
+.object-card .inquire {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 11.5px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+/* ---------- Colophon / Collaborators ---------- */
+.colophon {
+  border-top: 1px solid rgba(192,143,62,0.25);
+  padding: 40px 0 60px;
+  margin-top: 12px;
+}
+.colophon .section-label { margin-bottom: 18px; }
+/* 18px rather than 14: the longer role labels ("Poetics of
+   relationality") wrap onto two lines in the 140px column, and the
+   rows needed a little more air between them to stay legible as
+   separate entries. */
+.roles {
+  display: grid;
+  gap: 18px;
+}
+.role-row {
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  gap: 16px;
+  font-size: 15px;
+  align-items: baseline;
+}
+@media (max-width: 480px) {
+  .role-row { grid-template-columns: 1fr; gap: 2px; }
+}
+.role-row .role {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 11.5px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--brass-bright);
+}
+.role-row .who { color: var(--text-on-ink); }
+.role-row .who span { color: var(--mist); font-size: 13.5px; }
+
+.group-block { margin-top: 22px; }
+.group-label {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 11.5px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--brass-bright);
+  margin: 0 0 8px;
+}
+.group-names {
+  font-size: 15px;
+  color: var(--text-on-ink);
+  margin: 0 0 6px;
+}
+.group-names.sub {
+  font-size: 13.5px;
+  color: var(--mist);
+}
+.group-names.sub b {
+  color: var(--vellum-dim);
+  font-weight: 500;
+  font-style: italic;
+}
+
+footer {
+  text-align: center;
+  padding: 30px 0 50px;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 11.5px;
+  color: var(--mist);
+}
+
+/* ===========================================================
+   Added when the single page was split into several.
+   Everything above this line is unchanged from the mockup.
+   =========================================================== */
+
+/* Small mono links that move you between pages: "all gatherings →"
+   at the foot of the homepage list, "← back" atop a single piece. */
+.more-link, .back-link {
+  display: inline-block;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 12px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.back-link {
+  color: var(--mist);
+  margin-bottom: 30px;
+}
+.back-link:hover { color: var(--brass-bright); }
+
+/* ---------- The archive: every gathering, one line each ---------- */
+.archive-list {
+  margin: 0 0 40px;
+  padding: 0;
+  list-style: none;
+}
+.archive-item {
+  border-top: 1px solid rgba(192,143,62,0.18);
+  padding: 24px 0;
+}
+.archive-item:last-child {
+  border-bottom: 1px solid rgba(192,143,62,0.18);
+}
+.archive-item h2 {
+  font-family: 'Fraunces', serif;
+  font-weight: 500;
+  font-size: 21px;
+  margin: 0 0 6px;
+  line-height: 1.3;
+}
+.archive-item h2 a { color: var(--text-on-ink); }
+.archive-item h2 a:hover { color: var(--brass-bright); text-decoration: none; }
+.archive-item .a-meta {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 11.5px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--mist);
+  margin: 0 0 8px;
+}
+.archive-item .a-theme {
+  font-style: italic;
+  color: var(--ember);
+  text-transform: none;
+  letter-spacing: 0;
+}
+.archive-item .a-note {
+  color: var(--mist);
+  font-size: 15px;
+  margin: 0;
+  max-width: 560px;
+}
+
+/* A single gathering on its own page needs a little air at the top,
+   since there is no hero above it. */
+.single { padding-top: 44px; }
+.page-head { padding: 44px 0 8px; }
+.page-head h1 {
+  font-family: 'Fraunces', serif;
+  font-weight: 500;
+  font-size: clamp(26px, 4vw, 34px);
+  margin: 0 0 14px;
+  color: var(--text-on-ink);
+}

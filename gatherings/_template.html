@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- ============ 1 of 5: the browser tab title ============
+     Change "Piece title" to the real title. Leave " — Pulse". -->
+<title>Piece title — Pulse</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400&family=IBM+Plex+Mono:wght@400;500&family=Noto+Nastaliq+Urdu:wght@400;500&family=Noto+Serif+Bengali:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+<!-- Nothing between here and the next marked section needs changing. -->
+<header>
+  <div class="wrap header-row">
+    <div class="wordmark"><a href="../index.html">P<em>u</em>lse</a></div>
+    <nav>
+      <a href="../gatherings.html">Gatherings</a>
+      <a href="../index.html#materials">Materials</a>
+      <a href="../index.html#colophon">Collaborators</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap single">
+
+  <a class="back-link" href="../gatherings.html">&larr; All gatherings</a>
+
+  <article class="gathering">
+
+    <!-- ============ 2 of 5: who and what theme ============ -->
+    <div class="g-meta">
+      <span>Writer's name &middot; where</span>
+      <span class="theme-tag">theme: the theme</span>
+    </div>
+
+    <!-- ============ 3 of 5: title, and a line about it ============ -->
+    <h2>Piece title</h2>
+    <p class="g-note">A sentence or two on what this one is, or what it was reaching for.</p>
+
+    <!-- ============ 4 of 5: the piece itself ============
+
+         THE ONE RULE: the language the piece was WRITTEN in goes
+         first. Translations come after, in any order.
+
+         Delete any language block you don't need. Keep at least one.
+         Paste the poem with its real line breaks — they show up
+         exactly as you type them, so no special marks are needed.
+
+         Do not change the lang="xx" part: that single attribute is
+         what picks the right font and spacing for each script. -->
+    <div class="languages">
+
+      <div class="lang-block" lang="tr">
+        <span class="lang-tag">Türkçe</span>
+        <p>Turkish text goes here.
+Second line.
+Third line.</p>
+      </div>
+
+      <div class="lang-block" lang="en">
+        <span class="lang-tag">English</span>
+        <p>English text goes here.
+Second line.
+Third line.</p>
+      </div>
+
+      <!-- Urdu. Keep dir="rtl" — that is what makes it read
+           right-to-left. Delete this whole block if unused. -->
+      <div class="lang-block" lang="ur" dir="rtl">
+        <span class="lang-tag">اردو</span>
+        <p>اردو یہاں لکھیں۔
+دوسری سطر۔</p>
+      </div>
+
+      <!-- Bangla. Delete this whole block if unused. -->
+      <div class="lang-block" lang="bn">
+        <span class="lang-tag">বাংলা</span>
+        <p>বাংলা এখানে লিখুন।
+দ্বিতীয় লাইন।</p>
+      </div>
+
+    </div>
+
+    <!-- ============ 5 of 5: the credit ============
+         Always name the language it was written in, then any
+         translations. For example:
+           Written in Urdu, 12.03 · translated into English for Pulse
+           Written in Bangla · translated into English and Turkish
+           Written in Turkish · no translation yet          -->
+    <div class="g-credit">Written in [language], [date] &nbsp;&middot;&nbsp; translated into [language] for Pulse</div>
+
+  </article>
+
+</main>
+
+<footer>
+  a pulse is felt, not announced &nbsp;&middot;&nbsp; est. Ankara, kept up in Syracuse
+</footer>
+
+<script src="../pulse.js"></script>
+</body>
+</html>

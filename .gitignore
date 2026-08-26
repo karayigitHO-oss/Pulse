@@ -1,0 +1,12 @@
+# Windows / OneDrive housekeeping files
+desktop.ini
+Thumbs.db
+ehthumbs.db
+$RECYCLE.BIN/
+
+# macOS, in case anyone else in the collective is on a Mac
+.DS_Store
+._*
+
+# Office lock files, if a doc ever lands in here
+~$*
