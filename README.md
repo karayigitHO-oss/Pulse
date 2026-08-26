@@ -77,12 +77,25 @@ If you ever copy a gathering page and add Urdu or Bangla to it, the font
 line at the top needs to be the longer one from `_template.html`. Claude
 will handle this; it's noted here in case you're ever doing it by hand.
 
+## How Materials cards reach someone
+
+Two different routes, on purpose:
+
+- **NOM Atölye's own work** links straight to their Shopier shop. They
+  already sell there, so an inquiry email would only add a step.
+- **Everything else** — art collaborators, anyone without a shop — uses
+  `poeticalbridge@gmail.com`, a dedicated address rather than anyone's
+  personal inbox. Use it for any future non-NOM card too.
+
 ## Still to do
 
-- Real inquiry email — currently `hello@example.com` in two places in `index.html`.
+- **Confirm `poeticalbridge@gmail.com` is live and someone is watching it.**
+  The site publishes it as the inquiry address, so until the account exists
+  and is being read, inquiries are lost silently.
 - Auwn and Avia to check the Urdu and Bangla lines in `specimen.html`, which
   is waiting in `Desktop/pulse-drafts` until they do.
-- Second Materials card is still a placeholder.
-- The Bridge has no piece attached yet.
-- Stray comma in the Bridge note: "would even matter,." — left exactly as
-  supplied, pending a decision.
+- Second Materials card is still a placeholder — no title, no photo.
+- The Bridge has a note but no piece attached yet.
+- Both Materials cards need real photographs in place of the striped swatches.
+- The hero line reads "**Objects:** hand-bound" while the section it points
+  at is called Materials.
