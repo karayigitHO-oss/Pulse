@@ -513,3 +513,155 @@ footer {
   margin: 0 0 14px;
   color: var(--text-on-ink);
 }
+
+/* ===========================================================
+   Seasonal issues.
+   =========================================================== */
+
+/* ---------- Seasonal accent ----------
+   The base palette at the top of this file is fixed and applies
+   everywhere. A season adds three colours on top of it and never
+   replaces ink, vellum, brass or ember.
+
+   Each season's accent is chosen at the END of that season, once it
+   is clear what material or event actually shaped it — not picked in
+   advance. Put the class on <body> of that issue's page.
+
+   Summer 2026, The Poetics of Relationality: sampled from Yalım's
+   handmade notebook, whose colour was itself drawn from 3 Katip
+   Çelebi Sk., the Ankara building NOM Atölye's workshop moved into.
+
+   Fall 2026, Winter and Spring stay open until each one closes. */
+.season-summer-2026 {
+  --season-1: #dca91d;  /* gold */
+  --season-2: #d3814f;  /* orange */
+  --season-3: #9d041a;  /* deep red */
+}
+
+/* On a page with a season set, the tick marks are coloured across
+   its three stops by pulse.js — gold through orange into deep red.
+   This is the Coptic stitching along a notebook spine: the same
+   gesture the divider was always making, now in the season's thread.
+   Pages with no season set keep plain brass ticks. */
+
+.issue-head { padding: 44px 0 4px; }
+.issue-band {
+  height: 3px;
+  border-radius: 2px;
+  margin-bottom: 24px;
+  background: linear-gradient(90deg,
+    var(--season-1, var(--brass)),
+    var(--season-2, var(--brass)) 55%,
+    var(--season-3, var(--ember)));
+}
+.issue-no {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 12.5px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--season-1, var(--brass-bright));
+  margin: 0 0 12px;
+}
+.issue-head h1 {
+  font-family: 'Fraunces', serif;
+  font-weight: 500;
+  font-size: clamp(28px, 4.4vw, 38px);
+  line-height: 1.2;
+  margin: 0 0 16px;
+  color: var(--text-on-ink);
+}
+.issue-dates {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 12px;
+  color: var(--mist);
+  margin: 0 0 18px;
+}
+
+/* One issue in the list on gatherings.html */
+.issue-item {
+  border-top: 1px solid rgba(192,143,62,0.18);
+  padding: 26px 0;
+}
+.issue-item:last-child { border-bottom: 1px solid rgba(192,143,62,0.18); }
+.issue-item .swatch-row {
+  display: flex;
+  gap: 5px;
+  margin-bottom: 12px;
+}
+.issue-item .swatch-row i {
+  width: 26px;
+  height: 4px;
+  border-radius: 2px;
+  display: block;
+}
+.issue-item h2 {
+  font-family: 'Fraunces', serif;
+  font-weight: 500;
+  font-size: 21px;
+  line-height: 1.3;
+  margin: 0 0 6px;
+}
+.issue-item h2 a { color: var(--text-on-ink); }
+.issue-item h2 a:hover { color: var(--brass-bright); text-decoration: none; }
+.issue-item .a-meta {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 11.5px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--mist);
+  margin: 0 0 8px;
+}
+.issue-item .a-note {
+  color: var(--mist);
+  font-size: 15px;
+  margin: 0;
+  max-width: 560px;
+}
+
+.after-issues { margin-top: 26px; }
+
+/* Date on a single piece inside an issue */
+.entry-date {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 11.5px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #6b6248;
+}
+
+/* A poem excerpt on the homepage, pointing at the whole thing */
+.excerpt-more {
+  display: inline-block;
+  margin-top: 18px;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 11.5px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--ember);
+}
+
+/* A note for material promised but not yet delivered */
+.pending {
+  border: 1px dashed rgba(192,143,62,0.35);
+  border-radius: 3px;
+  padding: 16px 18px;
+  color: var(--mist);
+  font-size: 14.5px;
+  margin-top: 4px;
+}
+
+/* ---------- Roster ---------- */
+.person {
+  margin: 0 0 6px;
+  font-size: 15px;
+  color: var(--text-on-ink);
+}
+.person span {
+  color: var(--mist);
+  font-size: 13.5px;
+}
+
+.byline {
+  color: var(--vellum-dim);
+  margin-bottom: 8px;
+}

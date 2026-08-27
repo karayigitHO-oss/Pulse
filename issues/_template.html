@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- ============ 1 of 6: the browser tab title ============ -->
+<title>Issue N, Season Year: Theme — Pulse</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<!-- This longer font line includes Urdu and Bangla. If no piece in this
+     issue uses either script, you can shorten it, but leaving it costs
+     only page weight and never breaks anything. -->
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400&family=IBM+Plex+Mono:wght@400;500&family=Noto+Nastaliq+Urdu:wght@400;500&family=Noto+Serif+Bengali:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../style.css">
+</head>
+
+<!-- ============ 2 of 6: the season ============
+     This class is what colours the whole issue — the tick dividers,
+     the band under the title, the issue number. Add a matching
+     .season-name block to style.css with that season's three colours,
+     chosen at the END of the season from whatever actually shaped it. -->
+<body class="season-name-year">
+
+<header>
+  <div class="wrap header-row">
+    <div class="wordmark"><a href="../index.html">P<em>u</em>lse</a></div>
+    <nav>
+      <a href="../gatherings.html">Gatherings</a>
+      <a href="../index.html#materials">Materials</a>
+      <a href="../index.html#colophon">Collaborators</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- ============ 3 of 6: the issue's own heading ============ -->
+  <section class="issue-head">
+    <a class="back-link" href="../gatherings.html">&larr; All issues</a>
+    <div class="issue-band"></div>
+    <p class="issue-no">Issue N &nbsp;&middot;&nbsp; Season Year</p>
+    <h1>The theme</h1>
+    <p class="issue-dates">Month &ndash; Month Year &nbsp;&middot;&nbsp; gatherings every other Sunday</p>
+    <p class="section-intro">Where this season's colour came from.</p>
+  </section>
+
+  <div class="pulse-rule"></div>
+
+  <!-- ============ 4 of 6: anything promised but not yet in ============
+       Delete this if everything has arrived. -->
+  <div class="pending">Month and month are not here yet. Both are part of this issue and will be added once the material is delivered.</div>
+
+  <div class="pulse-rule"></div>
+
+  <!-- ============ 5 of 6: one entry per piece ============
+
+       Copy this whole article block for each piece. The id is what
+       makes a piece linkable on its own — issues/this-file.html#the-id.
+
+       THE ONE RULE: the language a piece was WRITTEN in goes first.
+       Translations come after, in any order. Delete any language block
+       you don't need; keep at least one. Paste the poem with its real
+       line breaks — they appear exactly as typed.
+
+       Do not change the lang="xx" part: that single attribute picks the
+       right font and line spacing for the script. Urdu also needs
+       dir="rtl". -->
+
+  <article class="gathering" id="piece-id">
+    <div class="g-meta">
+      <span>Writer's name &middot; where</span>
+      <span class="theme-tag">theme: the theme</span>
+    </div>
+    <h2>Piece title</h2>
+
+    <div class="languages">
+      <div class="lang-block" lang="tr">
+        <span class="lang-tag">Türkçe</span>
+        <p>Turkish text goes here.
+Second line.</p>
+      </div>
+
+      <!-- Urdu. Keep dir="rtl". Delete the block if unused. -->
+      <div class="lang-block" lang="ur" dir="rtl">
+        <span class="lang-tag">اردو</span>
+        <p>اردو یہاں لکھیں۔
+دوسری سطر۔</p>
+      </div>
+
+      <!-- Bangla. Delete the block if unused. -->
+      <div class="lang-block" lang="bn">
+        <span class="lang-tag">বাংলা</span>
+        <p>বাংলা এখানে লিখুন।
+দ্বিতীয় লাইন।</p>
+      </div>
+    </div>
+
+    <!-- ============ 6 of 6: the credit ============
+         Always name the language it was written in, then any
+         translations, and credit the translator by name:
+           Written in Turkish. No translation yet.
+           Written in Urdu · translated into English by [name]
+           Written in Bangla · translated into English and Turkish by [name] -->
+    <div class="g-credit"><span class="entry-date">1 January 2026</span> &nbsp;&middot;&nbsp; Written in [language]. No translation yet.</div>
+  </article>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <p class="byline">Hakkı Ozan Karayiğit &mdash; PhD Candidate in Geography, Syracuse University</p>
+    a pulse is felt, not announced &nbsp;&middot;&nbsp; est. Ankara, kept up in Syracuse
+  </div>
+</footer>
+
+<script src="../pulse.js"></script>
+</body>
+</html>
