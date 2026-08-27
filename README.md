@@ -108,10 +108,8 @@ resolve as *taker* throughout, not *receiver*:
   version of the homepage paragraph, which the group is writing rather
   than translating mechanically. Navigation, labels and prose get full
   parallel text; poems never do.
-- **Kaan to check the line breaks** in both poems. They were reconstructed
-  from capitalisation, since the text arrived as continuous prose.
-- **Kaan to confirm `geçenin`** in the ninth line of *Karanlıkta* — it may
-  be `gecenin`, as in line two, or may be deliberate.
+- **Kaan to confirm `geçenin`** in the twelfth line of *Karanlıkta* — it
+  may be `gecenin`, as in line two, or may be deliberate. Left as written.
 - June and July material for Issue 1.
 - Notebook photographs into `images/`, with Yalım's explicit okay.
 - Second Materials card is still a placeholder — no title, no photo.

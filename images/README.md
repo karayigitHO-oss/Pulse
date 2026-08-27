@@ -33,8 +33,3 @@ Only put photographs in here that the collective has the right to
 publish. NOM Atölye's product photographs are Yalım's work, so they need
 his explicit okay, not just his awareness — once they are in the repo
 they are public and can be copied by anyone.
-
-Screenshots of Google Maps or Street View should not go on the site.
-Google's imagery is licensed and republishing it on a public page is not
-covered by that licence. If a photograph of the Katip Çelebi building is
-wanted, someone in the group should take one.
