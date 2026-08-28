@@ -34,8 +34,8 @@
         <div class="lang-menu" hidden>
           <button data-lang="en"><span>English</span></button>
           <button data-lang="tr"><span>Türkçe</span></button>
-          <button data-lang="ur"><span>اردو</span></button>
-          <button data-lang="bn"><span>বাংলা</span></button>
+          <button data-lang="ur"><span>اردو</span><span class="soon" data-i18n="lang.poemsSoon">interface only</span></button>
+          <button data-lang="bn"><span>বাংলা</span><span class="soon" data-i18n="lang.poemsSoon">interface only</span></button>
         </div>
       </div>
     </div>
@@ -208,12 +208,50 @@ Nothing is diminished</p>
       <div class="corner" role="button" tabindex="-1" aria-hidden="true"></div>
     </article>
 
+    <!-- TRANSLATION of KARANLIKTA. No heading: the original keeps its
+         title, the translation is presented as the poem alone.
+
+         DRAFT — not yet reviewed by Kaan. Three open questions sit on
+         it: the "adım" pun (both "my name" and "my step", lost in
+         English), the "sessizlik / susku" pair rendered as "silence /
+         hush", and line 12's "geçenin", translated as written ("one
+         passing") rather than as "gecenin" ("a night's flesh").
+
+         LINE BREAKS ARE NOT GUESSED FROM CAPITALISATION. They follow
+         the 14 lines of the Turkish original one for one, and the
+         plan's own note confirms the reading: it says lines 12 and 14
+         begin lower case in Turkish but must capitalise in English
+         because of "I", which is exactly where "I sink" and "I spit"
+         fall here. Lines 7 and 9 keep their lower-case openings. -->
+    <article class="leaf" id="karanlikta-en" data-first-line="Between silence and hush, animal cries" hidden>
+      <div class="lang-block" lang="en" dir="ltr">
+        <span class="lang-tag" data-i18n="nb.translation">translation</span>
+        <p>Between silence and hush, animal cries
+My flesh is drawn into a night's invisible
+To walk the sky by the step, in the dark
+My gazelessness is not a failure to see, it is thousands of eyes
+I am prodded by sounds I have never heard
+Into soil that could never be mapped
+my steps are becoming crop
+A child comes on, treading in my tracks,
+and before daybreak grows and takes my name
+No name is mine anymore
+I let out cries in the dark,
+I sink my teeth into the flesh of one passing
+I swallow every word I hear,
+I spit out the bone</p>
+      </div>
+      <div class="g-credit">Kaan, NOM, 23.08.2026</div>
+      <div class="corner" role="button" tabindex="-1" aria-hidden="true"></div>
+    </article>
+
   </div>
 
   <ul class="leaf-index">
     <li><button>Buraya birkaç sözcük bırakıyorum <span class="kind" data-i18n="nb.original">original</span></button></li>
     <li><button>KARANLIKTA <span class="kind" data-i18n="nb.original">original</span></button></li>
     <li><button>I leave a few words here <span class="kind" data-i18n="nb.translation">translation</span></button></li>
+    <li><button>Between silence and hush, animal cries <span class="kind" data-i18n="nb.translation">translation</span></button></li>
   </ul>
 
 </main>

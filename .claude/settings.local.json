@@ -8,7 +8,8 @@
       "Bash(perl -0777 -ne 'if \\(/opening-poem.*?lang=\"en\">.*?<p>\\(.*?\\)<\\\\/p>/s\\) { print \"$1\\\\n\" }' index.html)",
       "Bash(perl -0777 -ne 'if \\(/id=\"sozcukler-en\".*?lang=\"en\">.*?<p>\\(.*?\\)<\\\\/p>/s\\) { my @l=split/\\\\n/,$1; print join\\(\"\\\\n\",@l[0..4]\\),\"\\\\n\" }' issues/summer-2026.html)",
       "Bash(rm -f home5.tmp first5.tmp)",
-      "Bash(perl -0777 -ne 'while \\(/<p>\\(\\(?:[^<]|<\\(?!\\\\/p>\\)\\)*\\)<\\\\/p>/gs\\) { my @l=split/\\\\n/,$1; print scalar\\(@l\\),\" satir\\\\n\" }' issues/summer-2026.html)"
+      "Bash(perl -0777 -ne 'while \\(/<p>\\(\\(?:[^<]|<\\(?!\\\\/p>\\)\\)*\\)<\\\\/p>/gs\\) { my @l=split/\\\\n/,$1; print scalar\\(@l\\),\" satir\\\\n\" }' issues/summer-2026.html)",
+      "Bash(perl -i -pe ' *)"
     ]
   }
 }

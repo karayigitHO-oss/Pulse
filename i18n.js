@@ -30,6 +30,7 @@ const STRINGS = {
     'tab.materials': 'Materials',
     'tab.collaborators': 'Collaborators',
     'lang.button': 'Language',
+    'lang.poemsSoon': 'interface only',
 
     'home.eyebrow': 'A gathering, roughly every other Sunday',
     /* The manifesto. The English is the group's own text. The Turkish,
@@ -50,7 +51,7 @@ const STRINGS = {
     'gatherings.intro': 'The group meets every other Sunday. What comes out of those meetings is gathered by season and theme, four issues a year, closer to a small magazine than a dated archive.',
     'gatherings.issue1meta': 'Issue 1 · Summer 2026 · June – August',
     'gatherings.issue1title': 'The Poetics of Relationality',
-    'gatherings.issue1note': 'Two poems by Kaan Gürgan, and the English translation of the first. June and July still to come.',
+    'gatherings.issue1note': 'Two poems by Kaan Gürgan, with English translations of both. June and July still to come.',
     'gatherings.open': 'Open this issue →',
 
     'materials.label': 'Materials',
@@ -106,10 +107,11 @@ const STRINGS = {
     'tab.materials': 'Malzemeler',
     'tab.collaborators': 'Katkıda Bulunanlar',
     'lang.button': 'Dil',
+    'lang.poemsSoon': 'yalnızca arayüz',
 
     'home.eyebrow': 'İki haftada bir pazar, bir buluşma',
     /* TASLAK — Ozan'ın düzeltmesi bekleniyor. */
-    'home.manifesto': 'Buluşmalarımız "ilişkiselliğin poetikası" fikrinden kıvılcımlandı; bu ilişkiselliği, farklı şehirlerden gelen ve gündelik hayat üzerine yazan insanlarla kurmayı umduğumuz "köprü" temsil ediyor. "Köprü"yü hem soyut hem de maddi bir kavram olarak düşünmek, bu buluşmaların bir anlamı olup olmadığına dair bir konuşmadan doğdu. Bağ kurma ediminde sessizce yerine oturan bir şey olduğuna inanıyoruz. Bu yüzden "bu tesadüfen oldu" demek yerine, soyutlamalar/kavramlar/temalar/terimler aracılığıyla gelecekteki tesadüfi bağlantıları biçimsel olarak mümkün kılan köprüler kurmayı umuyoruz.',
+    'home.manifesto': 'Buluşmalarımız "ilişkiselliğin şiirselliği" fikrinden kıvılcımlandı; bu ilişkiselliği, farklı şehirlerden gelen ve gündelik hayat üzerine yazan insanlarla kurmayı umduğumuz "köprü" temsil ediyor. "Köprü"yü hem soyut hem de maddi bir kavram olarak düşünmek, bu buluşmaların bir anlamı olup olmadığına dair bir konuşmadan doğdu. Bağ kurma ediminde sessizce yerine oturan bir şey olduğuna inanıyoruz. Bu yüzden "bu tesadüfen oldu" demek yerine, soyutlamalar/kavramlar/temalar/terimler aracılığıyla gelecekteki tesadüfi bağlantıları biçimsel olarak mümkün kılan köprüler kurmayı umuyoruz.',
     'home.orient.gatherings': 'Buluşmalar:',
     'home.orient.gatheringsText': 'Grup iki haftada bir pazar buluşuyor. Bu buluşmalardan çıkanlar mevsime ve temaya göre toplanıyor; yılda dört sayı, tarihli bir arşivden çok küçük bir dergiye yakın.',
     'home.orient.materials': 'Malzemeler:',
@@ -119,8 +121,8 @@ const STRINGS = {
     'gatherings.label': 'Buluşmalar',
     'gatherings.intro': 'Grup iki haftada bir pazar buluşuyor. Bu buluşmalardan çıkanlar mevsime ve temaya göre toplanıyor; yılda dört sayı, tarihli bir arşivden çok küçük bir dergiye yakın.',
     'gatherings.issue1meta': 'Sayı 1 · Yaz 2026 · Haziran – Ağustos',
-    'gatherings.issue1title': 'İlişkiselliğin Poetikası',
-    'gatherings.issue1note': 'Kaan Gürgan’dan iki şiir ve ilkinin İngilizce çevirisi. Haziran ve Temmuz henüz gelmedi.',
+    'gatherings.issue1title': 'İlişkiselliğin Şiirselliği',
+    'gatherings.issue1note': 'Kaan Gürgan’dan iki şiir, ikisinin de İngilizce çevirisi. Haziran ve Temmuz henüz gelmedi.',
     'gatherings.open': 'Bu sayıyı aç →',
 
     'materials.label': 'Malzemeler',
@@ -138,7 +140,7 @@ const STRINGS = {
     'materials.photo2': 'sanat işbirlikçisinin işi — fotoğraf buraya',
 
     'colophon.label': 'Künye',
-    'colophon.role1': 'İlişkiselliğin poetikası',
+    'colophon.role1': 'İlişkiselliğin şiirselliği',
     'colophon.who1': 'çeşitlenmiş soyut düşüncelerimizi birbirine bağlayan sözcükleri veriyor',
     'colophon.role2': 'Köprü',
     'colophon.who2': 'o çeşitlenmiş soyutlamalar arasında köprü kurmaya çalışıyor',
@@ -163,7 +165,7 @@ const STRINGS = {
     'nb.translation': 'çeviri',
     'nb.pending': 'Haziran ve Temmuz henüz burada değil. İkisi de bu sayının parçası; malzeme geldiğinde eklenecek.',
     'nb.issueNo': 'Sayı 1 · Yaz 2026',
-    'nb.issueTitle': 'İlişkiselliğin Poetikası',
+    'nb.issueTitle': 'İlişkiselliğin Şiirselliği',
     'nb.issueDates': 'Haziran – Ağustos 2026 · iki haftada bir pazar buluşma',
     'nb.colourNote': 'Bu mevsimin rengi Yalım’ın elle yaptığı bir defterden alındı; o defterin rengi de NOM Atölye’nin taşındığı Ankara’daki 3 Katip Çelebi Sk. binasından geliyor.',
     'nb.hint': 'Alt köşeden çek ya da düğmeleri kullan.',
@@ -176,6 +178,7 @@ const STRINGS = {
     'tab.materials': 'مواد',
     'tab.collaborators': 'شرکائے کار',
     'lang.button': 'زبان',
+    'lang.poemsSoon': 'صرف انٹرفیس',
 
     'home.eyebrow': 'ہر دوسرے اتوار، ایک نشست',
     /* DRAFT — for Auwn to correct. */
@@ -190,7 +193,7 @@ const STRINGS = {
     'gatherings.intro': 'گروہ ہر دوسرے اتوار ملتا ہے۔ ان ملاقاتوں سے جو نکلتا ہے وہ موسم اور موضوع کے حساب سے جمع کیا جاتا ہے، سال میں چار شمارے۔',
     'gatherings.issue1meta': 'شمارہ ۱ · گرما ۲۰۲۶ · جون – اگست',
     'gatherings.issue1title': 'تعلق داری کی شعریات',
-    'gatherings.issue1note': 'کان گورگان کی دو نظمیں، اور پہلی کا انگریزی ترجمہ۔ جون اور جولائی ابھی باقی ہیں۔',
+    'gatherings.issue1note': 'کان گورگان کی دو نظمیں، اور دونوں کے انگریزی ترجمے۔ جون اور جولائی ابھی باقی ہیں۔',
     'gatherings.open': 'یہ شمارہ کھولیں ←',
 
     'materials.label': 'مواد',
@@ -246,6 +249,7 @@ const STRINGS = {
     'tab.materials': 'উপকরণ',
     'tab.collaborators': 'সহযোগীরা',
     'lang.button': 'ভাষা',
+    'lang.poemsSoon': 'শুধু ইন্টারফেস',
 
     'home.eyebrow': 'এক রবিবার অন্তর একটি জমায়েত',
     /* DRAFT — for Avia to correct. */
@@ -260,7 +264,7 @@ const STRINGS = {
     'gatherings.intro': 'দলটি এক রবিবার অন্তর মিলিত হয়। সেই বৈঠক থেকে যা বেরিয়ে আসে তা ঋতু ও বিষয় অনুসারে সংকলিত হয়, বছরে চারটি সংখ্যা।',
     'gatherings.issue1meta': 'সংখ্যা ১ · গ্রীষ্ম ২০২৬ · জুন – আগস্ট',
     'gatherings.issue1title': 'সম্পর্কশীলতার কাব্যতত্ত্ব',
-    'gatherings.issue1note': 'কান গুরগানের দুটি কবিতা, এবং প্রথমটির ইংরেজি অনুবাদ। জুন ও জুলাই এখনও আসেনি।',
+    'gatherings.issue1note': 'কান গুরগানের দুটি কবিতা, এবং দুটিরই ইংরেজি অনুবাদ। জুন ও জুলাই এখনও আসেনি।',
     'gatherings.open': 'এই সংখ্যাটি খুলুন →',
 
     'materials.label': 'উপকরণ',
