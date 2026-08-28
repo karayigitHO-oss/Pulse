@@ -88,6 +88,21 @@ function shade(rgb, towards, amount) {
   return rgb.map(v => Math.round(v + (towards - v) * amount));
 }
 
+/* The palette colours are chosen to carry links and labels on a dark
+   background, so they are saturated and bright. Thread is not: it is
+   dyed cotton seen in ordinary light, and at full strength it reads as
+   plastic ribbon rather than binding. So the spine pulls each colour
+   towards a warm grey before drawing it, and keeps the lit and
+   shadowed edges close together — matte, not glossy. Nothing else on
+   the site is affected; this dulling lives only in the spine. */
+const THREAD_GREY = [124, 108, 92];
+const THREAD_MATTE = 0.34;      // how far towards that grey
+const THREAD_RELIEF = 0.20;     // how far the edges are lit and shadowed
+
+function matte(rgb) {
+  return rgb.map((v, i) => Math.round(v + (THREAD_GREY[i] - v) * THREAD_MATTE));
+}
+
 function buildSpine(el) {
   const cs = getComputedStyle(document.documentElement);
   const colours = SPINE_COLOURS
@@ -104,13 +119,14 @@ function buildSpine(el) {
   let i = 0;
   while (laid < run + 80) {
     const [size, gap] = SPINE_STITCHES[i % SPINE_STITCHES.length];
-    const base = colours[i % colours.length];
+    const base = matte(colours[i % colours.length]);
 
     // Lit edge, body, shadowed edge — across the width of the binding,
-    // following the same curve as the paper underneath it.
-    const lit = 'rgb(' + shade(base, 255, 0.42).join(',') + ')';
+    // following the same curve as the paper underneath it. The relief
+    // is shallow on purpose: thread catches a little light, not a lot.
+    const lit = 'rgb(' + shade(base, 255, THREAD_RELIEF).join(',') + ')';
     const body = 'rgb(' + base.join(',') + ')';
-    const dark = 'rgb(' + shade(base, 0, 0.42).join(',') + ')';
+    const dark = 'rgb(' + shade(base, 0, THREAD_RELIEF).join(',') + ')';
 
     const stitch = document.createElement('span');
     if (horizontal) {

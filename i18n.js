@@ -32,6 +32,11 @@ const STRINGS = {
     'lang.button': 'Language',
 
     'home.eyebrow': 'A gathering, roughly every other Sunday',
+    /* The manifesto. The English is the group's own text. The Turkish,
+       Urdu and Bangla below it are Claude's drafts, written so that
+       choosing a language does not leave a reader looking at the most
+       central paragraph on the site in English. They are drafts. */
+    'home.manifesto': 'Our meetings sparked from the idea of "poetics of relationality," and this relationality is represented by the "bridge" we hope to make with people originating from different cities, and writing about everyday life. The idea of "bridge" as an abstract but also a material concept came out of a conversation about whether these gatherings would even matter. We believe there\'s something quietly fitting about an act of connecting. So, rather than saying "this happened by accident," we hope to build bridges that formally enact future accidental connections through abstractions/concepts/themes/terms.',
     'home.orient.gatherings': 'Gatherings:',
     'home.orient.gatheringsText': 'The group meets every other Sunday. What comes out of those meetings is gathered by season and theme, four issues a year, closer to a small magazine than a dated archive.',
     'home.orient.materials': 'Materials:',
@@ -97,19 +102,21 @@ const STRINGS = {
   },
 
   tr: {
-    'tab.gatherings': 'Toplanmalar',
+    'tab.gatherings': 'Buluşmalar',
     'tab.materials': 'Malzemeler',
     'tab.collaborators': 'Katkıda Bulunanlar',
     'lang.button': 'Dil',
 
-    'home.eyebrow': 'İki haftada bir pazar, bir toplanma',
-    'home.orient.gatherings': 'Toplanmalar:',
+    'home.eyebrow': 'İki haftada bir pazar, bir buluşma',
+    /* TASLAK — Ozan'ın düzeltmesi bekleniyor. */
+    'home.manifesto': 'Buluşmalarımız "ilişkiselliğin poetikası" fikrinden kıvılcımlandı; bu ilişkiselliği, farklı şehirlerden gelen ve gündelik hayat üzerine yazan insanlarla kurmayı umduğumuz "köprü" temsil ediyor. "Köprü"yü hem soyut hem de maddi bir kavram olarak düşünmek, bu buluşmaların bir anlamı olup olmadığına dair bir konuşmadan doğdu. Bağ kurma ediminde sessizce yerine oturan bir şey olduğuna inanıyoruz. Bu yüzden "bu tesadüfen oldu" demek yerine, soyutlamalar/kavramlar/temalar/terimler aracılığıyla gelecekteki tesadüfi bağlantıları biçimsel olarak mümkün kılan köprüler kurmayı umuyoruz.',
+    'home.orient.gatherings': 'Buluşmalar:',
     'home.orient.gatheringsText': 'Grup iki haftada bir pazar buluşuyor. Bu buluşmalardan çıkanlar mevsime ve temaya göre toplanıyor; yılda dört sayı, tarihli bir arşivden çok küçük bir dergiye yakın.',
     'home.orient.materials': 'Malzemeler:',
     'home.orient.materialsText': 'elle ciltlenmiş',
     'home.orient.openText': 'Soyutluk düşünen herkese açık',
 
-    'gatherings.label': 'Toplanmalar',
+    'gatherings.label': 'Buluşmalar',
     'gatherings.intro': 'Grup iki haftada bir pazar buluşuyor. Bu buluşmalardan çıkanlar mevsime ve temaya göre toplanıyor; yılda dört sayı, tarihli bir arşivden çok küçük bir dergiye yakın.',
     'gatherings.issue1meta': 'Sayı 1 · Yaz 2026 · Haziran – Ağustos',
     'gatherings.issue1title': 'İlişkiselliğin Poetikası',
@@ -157,7 +164,7 @@ const STRINGS = {
     'nb.pending': 'Haziran ve Temmuz henüz burada değil. İkisi de bu sayının parçası; malzeme geldiğinde eklenecek.',
     'nb.issueNo': 'Sayı 1 · Yaz 2026',
     'nb.issueTitle': 'İlişkiselliğin Poetikası',
-    'nb.issueDates': 'Haziran – Ağustos 2026 · iki haftada bir pazar toplanma',
+    'nb.issueDates': 'Haziran – Ağustos 2026 · iki haftada bir pazar buluşma',
     'nb.colourNote': 'Bu mevsimin rengi Yalım’ın elle yaptığı bir defterden alındı; o defterin rengi de NOM Atölye’nin taşındığı Ankara’daki 3 Katip Çelebi Sk. binasından geliyor.',
     'nb.hint': 'Alt köşeden çek ya da düğmeleri kullan.',
 
@@ -171,6 +178,8 @@ const STRINGS = {
     'lang.button': 'زبان',
 
     'home.eyebrow': 'ہر دوسرے اتوار، ایک نشست',
+    /* DRAFT — for Auwn to correct. */
+    'home.manifesto': 'ہماری نشستیں "تعلق داری کی شعریات" کے خیال سے شروع ہوئیں، اور اس تعلق داری کی نمائندگی وہ "پُل" کرتا ہے جو ہم مختلف شہروں سے آنے والے اور روزمرہ زندگی پر لکھنے والے لوگوں کے ساتھ باندھنا چاہتے ہیں۔ "پُل" کو ایک تجریدی مگر ساتھ ہی مادی تصور کے طور پر سوچنا اُس گفتگو سے نکلا جس میں سوال یہ تھا کہ ان نشستوں کا کوئی مطلب بھی ہے یا نہیں۔ ہمیں لگتا ہے کہ جوڑنے کے عمل میں کوئی چیز خاموشی سے اپنی جگہ پا لیتی ہے۔ چنانچہ "یہ اتفاقاً ہوا" کہنے کے بجائے، ہم ایسے پُل باندھنا چاہتے ہیں جو تجریدات، تصورات، موضوعات اور اصطلاحات کے ذریعے آئندہ کے اتفاقی رابطوں کو باقاعدہ ممکن بنائیں۔',
     'home.orient.gatherings': 'نشستیں:',
     'home.orient.gatheringsText': 'گروہ ہر دوسرے اتوار ملتا ہے۔ ان ملاقاتوں سے جو نکلتا ہے وہ موسم اور موضوع کے حساب سے جمع کیا جاتا ہے، سال میں چار شمارے — تاریخ وار محفوظ خانے سے زیادہ ایک چھوٹے رسالے جیسا۔',
     'home.orient.materials': 'مواد:',
@@ -239,6 +248,8 @@ const STRINGS = {
     'lang.button': 'ভাষা',
 
     'home.eyebrow': 'এক রবিবার অন্তর একটি জমায়েত',
+    /* DRAFT — for Avia to correct. */
+    'home.manifesto': 'আমাদের জমায়েত শুরু হয়েছিল "সম্পর্কশীলতার কাব্যতত্ত্ব" ভাবনা থেকে, আর সেই সম্পর্কশীলতার প্রতিনিধিত্ব করে সেই "সেতু", যা আমরা ভিন্ন ভিন্ন শহর থেকে আসা এবং দৈনন্দিন জীবন নিয়ে লেখা মানুষদের সঙ্গে গড়তে চাই। "সেতু"কে একই সঙ্গে বিমূর্ত ও বস্তুগত ধারণা হিসেবে ভাবার কথাটি এসেছিল এমন এক আলাপ থেকে, যেখানে প্রশ্ন ছিল এই জমায়েতগুলোর আদৌ কোনো মানে আছে কি না। আমাদের মনে হয়, যুক্ত হওয়ার কাজটির মধ্যে নিঃশব্দে মানানসই কিছু একটা আছে। তাই "এটা কাকতালীয়ভাবে ঘটেছে" বলার বদলে আমরা এমন সেতু গড়তে চাই যা বিমূর্ততা, ধারণা, বিষয় ও পরিভাষার মধ্য দিয়ে ভবিষ্যতের আকস্মিক সংযোগগুলোকে আনুষ্ঠানিকভাবে সম্ভব করে তোলে।',
     'home.orient.gatherings': 'জমায়েত:',
     'home.orient.gatheringsText': 'দলটি এক রবিবার অন্তর মিলিত হয়। সেই বৈঠক থেকে যা বেরিয়ে আসে তা ঋতু ও বিষয় অনুসারে সংকলিত হয়, বছরে চারটি সংখ্যা — তারিখভিত্তিক সংগ্রহশালার চেয়ে বরং ছোট একটি পত্রিকার মতো।',
     'home.orient.materials': 'উপকরণ:',
