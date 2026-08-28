@@ -59,3 +59,88 @@ function buildPulse(el) {
 }
 
 document.querySelectorAll('.pulse-rule').forEach(buildPulse);
+
+/* ===========================================================
+   The spine.
+
+   Each stitch is drawn as its own element rather than cut out of one
+   repeating gradient, for two reasons: a gradient repeats at a fixed
+   period, which reads as machine-ruled, and it cannot give each band
+   its own shading. Here every stitch gets a height, a gap and a
+   gradient of its own — lit on one edge, shadowed on the other — so
+   the thread sits on the paper like a cord.
+
+   The gaps are left empty on purpose. The spine's background is paper,
+   so a gap is the edge of the sheets showing between stitches.
+   =========================================================== */
+
+// height, gap — uneven on purpose, the same refusal of the ruler the
+// pulse rule makes.
+const SPINE_STITCHES = [
+  [19, 5], [12, 4], [23, 7], [15, 4], [27, 5], [13, 7],
+  [20, 4], [11, 6], [25, 5], [16, 7], [21, 4], [14, 6],
+  [24, 5], [12, 7], [18, 4], [26, 6]
+];
+
+const SPINE_COLOURS = ['--gold', '--orange', '--deep-red'];
+
+function shade(rgb, towards, amount) {
+  return rgb.map(v => Math.round(v + (towards - v) * amount));
+}
+
+function buildSpine(el) {
+  const cs = getComputedStyle(document.documentElement);
+  const colours = SPINE_COLOURS
+    .map(name => hexToRgb(cs.getPropertyValue(name)))
+    .filter(Boolean);
+  if (!colours.length) return;
+
+  const horizontal = window.matchMedia('(max-width: 700px)').matches;
+  const run = horizontal ? window.innerWidth : window.innerHeight;
+
+  el.textContent = '';
+
+  let laid = 0;
+  let i = 0;
+  while (laid < run + 80) {
+    const [size, gap] = SPINE_STITCHES[i % SPINE_STITCHES.length];
+    const base = colours[i % colours.length];
+
+    // Lit edge, body, shadowed edge — across the width of the binding,
+    // following the same curve as the paper underneath it.
+    const lit = 'rgb(' + shade(base, 255, 0.42).join(',') + ')';
+    const body = 'rgb(' + base.join(',') + ')';
+    const dark = 'rgb(' + shade(base, 0, 0.42).join(',') + ')';
+
+    const stitch = document.createElement('span');
+    if (horizontal) {
+      stitch.style.width = size + 'px';
+      stitch.style.marginRight = gap + 'px';
+      stitch.style.background =
+        'linear-gradient(180deg, ' + lit + ' 0%, ' + body + ' 46%, ' + dark + ' 100%)';
+    } else {
+      stitch.style.height = size + 'px';
+      stitch.style.marginBottom = gap + 'px';
+      stitch.style.background =
+        'linear-gradient(90deg, ' + lit + ' 0%, ' + body + ' 46%, ' + dark + ' 100%)';
+    }
+    el.appendChild(stitch);
+
+    laid += size + gap;
+    i++;
+  }
+}
+
+function drawSpines() {
+  document.querySelectorAll('.spine').forEach(buildSpine);
+}
+
+drawSpines();
+
+// The band has to refill when the window changes size, and swap
+// direction when it crosses the point where it lies down.
+let spineTimer;
+window.addEventListener('resize', () => {
+  window.clearTimeout(spineTimer);
+  spineTimer = window.setTimeout(drawSpines, 150);
+});

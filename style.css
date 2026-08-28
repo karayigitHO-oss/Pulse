@@ -73,74 +73,85 @@ body {
    top of every vellum card, enlarged to the scale of a real binding. */
 :root { --spine-w: clamp(30px, 7vw, 68px); }
 
+/* Three layers, the way a real binding has three.
+
+   1. The page block. The spine's own background is paper, not ink, so
+      the gaps between stitches are the edges of the sheets showing
+      through. It is shaded across its width — darker at both edges,
+      lightest just off centre — which is what makes a spine look
+      round rather than flat.
+   2. The thread. Each stitch is its own element with its own gradient
+      across the width, lit on the left and shadowed on the right, so
+      it sits on the paper like a cord instead of a printed bar.
+   3. The lift. A soft shadow along the right edge, where the binding
+      meets the page. This is what actually reads as depth; without it
+      the whole thing stays a flag no matter how the colours are cut.
+
+   Stitch heights and gaps come from pulse.js and are deliberately
+   uneven — hand-sewn, not machine-ruled. */
 .spine {
   position: fixed;
   left: 0; top: 0; bottom: 0;
   width: var(--spine-w);
   z-index: 5;
-  background: #150d0c;
-  border-right: 1px solid rgba(220,169,29,0.28);
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  overflow: hidden;
+  background: linear-gradient(90deg,
+    #9c8b6c 0%,
+    #cfc2a3 12%,
+    #ece2c8 42%,
+    #ded2b4 68%,
+    #b5a586 88%,
+    #8a7a5e 100%);
+  box-shadow:
+    7px 0 20px -5px rgba(0,0,0,0.6),
+    3px 0 5px -2px rgba(0,0,0,0.45),
+    inset -1px 0 0 rgba(0,0,0,0.22);
 }
-/* The thread itself, inset from both edges so the binding has margins
-   the way a real spine does. Two passes at different periods, so the
-   stitch reads as hand-sewn rather than machine-ruled — the same
-   refusal of the ruler the pulse rule makes. */
-.spine::before,
-.spine::after {
-  content: "";
-  position: absolute;
-  top: 0; bottom: 0;
-}
-.spine::before {
-  left: 26%; right: 26%;
+.spine > span { display: block; flex: none; }
+
+/* If pulse.js never runs the spine would be a blank cream strip, so an
+   empty one falls back to a plain stitched pattern. */
+.spine:empty {
   background-image: repeating-linear-gradient(180deg,
-    var(--gold)     0 13px,
-    transparent    13px 20px,
-    var(--orange)  20px 34px,
-    transparent    34px 41px,
-    var(--deep-red) 41px 57px,
-    transparent    57px 65px);
-}
-.spine::after {
-  left: 38%; right: 38%;
-  opacity: 0.5;
-  background-image: repeating-linear-gradient(180deg,
-    var(--deep-red)  0 9px,
-    transparent      9px 23px,
-    var(--gold)     23px 30px,
-    transparent     30px 47px);
+    var(--gold)      0 14px,
+    transparent     14px 19px,
+    var(--orange)   19px 34px,
+    transparent     34px 39px,
+    var(--deep-red) 39px 56px,
+    transparent     56px 62px);
 }
 
 /* On a narrow screen a vertical band would eat the measure, so it lies
    down across the top instead and the text keeps its full width. */
 @media (max-width: 700px) {
-  body { padding-left: 0; padding-top: 11px; }
+  body { padding-left: 0; padding-top: 13px; }
   .spine {
     left: 0; right: 0; top: 0; bottom: auto;
-    width: auto; height: 11px;
-    border-right: none;
-    border-bottom: 1px solid rgba(220,169,29,0.28);
+    width: auto; height: 13px;
+    flex-direction: row;
+    background: linear-gradient(180deg,
+      #9c8b6c 0%,
+      #cfc2a3 12%,
+      #ece2c8 42%,
+      #ded2b4 68%,
+      #b5a586 88%,
+      #8a7a5e 100%);
+    box-shadow:
+      0 7px 20px -5px rgba(0,0,0,0.6),
+      0 3px 5px -2px rgba(0,0,0,0.45),
+      inset 0 -1px 0 rgba(0,0,0,0.22);
   }
-  .spine::before, .spine::after {
-    top: auto; bottom: auto; left: 0; right: 0;
-  }
-  .spine::before {
-    top: 22%; bottom: 22%;
+  .spine:empty {
     background-image: repeating-linear-gradient(90deg,
-      var(--gold)     0 13px,
-      transparent    13px 20px,
-      var(--orange)  20px 34px,
-      transparent    34px 41px,
-      var(--deep-red) 41px 57px,
-      transparent    57px 65px);
-  }
-  .spine::after {
-    top: 38%; bottom: 38%;
-    background-image: repeating-linear-gradient(90deg,
-      var(--deep-red)  0 9px,
-      transparent      9px 23px,
-      var(--gold)     23px 30px,
-      transparent     30px 47px);
+      var(--gold)      0 14px,
+      transparent     14px 19px,
+      var(--orange)   19px 34px,
+      transparent     34px 39px,
+      var(--deep-red) 39px 56px,
+      transparent     56px 62px);
   }
 }
 
@@ -693,12 +704,15 @@ nav a:hover { color: var(--brass-bright); }
   font-style: italic;
 }
 
+/* The footer is now one question and nothing else, so it gets a little
+   more room and a little more weight than a strapline needed. */
 footer {
   text-align: center;
-  padding: 30px 0 50px;
-  font-family: 'IBM Plex Mono', monospace;
-  font-size: 11.5px;
-  color: var(--mist);
+  padding: 46px 0 58px;
+  font-family: 'Source Serif 4', serif;
+  font-size: 16px;
+  font-style: italic;
+  color: var(--vellum-dim);
 }
 
 /* ===========================================================
@@ -1020,4 +1034,15 @@ footer {
 .byline {
   color: var(--vellum-dim);
   margin-bottom: 8px;
+}
+
+/* The corner peel is not something a reader would think to try, so the
+   notebook says so once, quietly, above the first page. */
+.nb-hint {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.04em;
+  color: var(--mist);
+  margin: 0 0 10px;
+  text-align: center;
 }

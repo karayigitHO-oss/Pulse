@@ -30,16 +30,16 @@ const STRINGS = {
     'tab.materials': 'Materials',
     'tab.collaborators': 'Collaborators',
     'lang.button': 'Language',
-    'lang.heading': 'Language',
-    'lang.soon': 'interface only',
 
     'home.eyebrow': 'A gathering, roughly every other Sunday',
     'home.orient.gatherings': 'Gatherings:',
     'home.orient.gatheringsText': 'The group meets every other Sunday. What comes out of those meetings is gathered by season and theme, four issues a year, closer to a small magazine than a dated archive.',
     'home.orient.materials': 'Materials:',
-    'home.orient.materialsText': 'hand-bound, one at a time',
-    'home.orient.open': 'Open',
-    'home.orient.openText': 'to anyone who shows up with a theme',
+    'home.orient.materialsText': 'hand-bound',
+    /* One key, not a bold label plus a trailing clause. Turkish puts
+       "açık" at the end of the sentence, so a fixed "Open" + text
+       split would force the wrong word order in half the languages. */
+    'home.orient.openText': 'Open to anyone who thinks in abstractions',
 
     'gatherings.label': 'Gatherings',
     'gatherings.intro': 'The group meets every other Sunday. What comes out of those meetings is gathered by season and theme, four issues a year, closer to a small magazine than a dated archive.',
@@ -93,7 +93,7 @@ const STRINGS = {
     'nb.colourNote': 'The season’s colour is taken from a notebook Yalım made by hand, whose own colour came from 3 Katip Çelebi Sk., the Ankara building the NOM Atölye workshop moved into.',
     'nb.hint': 'Pull the bottom corner, or use the buttons.',
 
-    'footer.line': 'a pulse is felt, not announced · est. Ankara, kept up in Syracuse'
+    'footer.question': 'Can abstract thoughts materially bridge?'
   },
 
   tr: {
@@ -101,16 +101,13 @@ const STRINGS = {
     'tab.materials': 'Malzemeler',
     'tab.collaborators': 'Katkıda Bulunanlar',
     'lang.button': 'Dil',
-    'lang.heading': 'Dil',
-    'lang.soon': 'yalnızca arayüz',
 
     'home.eyebrow': 'İki haftada bir pazar, bir toplanma',
     'home.orient.gatherings': 'Toplanmalar:',
     'home.orient.gatheringsText': 'Grup iki haftada bir pazar buluşuyor. Bu buluşmalardan çıkanlar mevsime ve temaya göre toplanıyor; yılda dört sayı, tarihli bir arşivden çok küçük bir dergiye yakın.',
     'home.orient.materials': 'Malzemeler:',
-    'home.orient.materialsText': 'elle ciltlenmiş, teker teker',
-    'home.orient.open': 'Açık',
-    'home.orient.openText': 'bir temayla gelen herkese',
+    'home.orient.materialsText': 'elle ciltlenmiş',
+    'home.orient.openText': 'Soyutluk düşünen herkese açık',
 
     'gatherings.label': 'Toplanmalar',
     'gatherings.intro': 'Grup iki haftada bir pazar buluşuyor. Bu buluşmalardan çıkanlar mevsime ve temaya göre toplanıyor; yılda dört sayı, tarihli bir arşivden çok küçük bir dergiye yakın.',
@@ -164,7 +161,7 @@ const STRINGS = {
     'nb.colourNote': 'Bu mevsimin rengi Yalım’ın elle yaptığı bir defterden alındı; o defterin rengi de NOM Atölye’nin taşındığı Ankara’daki 3 Katip Çelebi Sk. binasından geliyor.',
     'nb.hint': 'Alt köşeden çek ya da düğmeleri kullan.',
 
-    'footer.line': 'nabız duyurulmaz, hissedilir · Ankara’da kuruldu, Syracuse’da sürdürülüyor'
+    'footer.question': 'Soyut fikirler somut köprüler kurabilir mi?'
   },
 
   ur: {
@@ -172,16 +169,13 @@ const STRINGS = {
     'tab.materials': 'مواد',
     'tab.collaborators': 'شرکائے کار',
     'lang.button': 'زبان',
-    'lang.heading': 'زبان',
-    'lang.soon': 'صرف انٹرفیس',
 
     'home.eyebrow': 'ہر دوسرے اتوار، ایک نشست',
     'home.orient.gatherings': 'نشستیں:',
     'home.orient.gatheringsText': 'گروہ ہر دوسرے اتوار ملتا ہے۔ ان ملاقاتوں سے جو نکلتا ہے وہ موسم اور موضوع کے حساب سے جمع کیا جاتا ہے، سال میں چار شمارے — تاریخ وار محفوظ خانے سے زیادہ ایک چھوٹے رسالے جیسا۔',
     'home.orient.materials': 'مواد:',
-    'home.orient.materialsText': 'ہاتھ سے بندھا ہوا، ایک ایک کر کے',
-    'home.orient.open': 'کھلا ہے',
-    'home.orient.openText': 'ہر اس شخص کے لیے جو کوئی موضوع لے کر آئے',
+    'home.orient.materialsText': 'ہاتھ سے بندھا ہوا',
+    'home.orient.openText': 'ہر اس شخص کے لیے کھلا ہے جو تجرید میں سوچتا ہے',
 
     'gatherings.label': 'نشستیں',
     'gatherings.intro': 'گروہ ہر دوسرے اتوار ملتا ہے۔ ان ملاقاتوں سے جو نکلتا ہے وہ موسم اور موضوع کے حساب سے جمع کیا جاتا ہے، سال میں چار شمارے۔',
@@ -235,7 +229,7 @@ const STRINGS = {
     'nb.colourNote': 'اس موسم کا رنگ یالم کی ہاتھ سے بنائی ہوئی ایک کاپی سے لیا گیا ہے، اور اس کاپی کا رنگ انقرہ کی اُس عمارت سے آیا جہاں NOM اتولیے منتقل ہوا: ۳ کاتب چلبی سڑک۔',
     'nb.hint': 'نیچے کے کونے سے کھینچیں، یا بٹن استعمال کریں۔',
 
-    'footer.line': 'نبض سنائی نہیں جاتی، محسوس ہوتی ہے · انقرہ میں شروع، سیراکیوز میں جاری'
+    'footer.question': 'کیا تجریدی خیال مادی طور پر پُل باندھ سکتے ہیں؟'
   },
 
   bn: {
@@ -243,16 +237,13 @@ const STRINGS = {
     'tab.materials': 'উপকরণ',
     'tab.collaborators': 'সহযোগীরা',
     'lang.button': 'ভাষা',
-    'lang.heading': 'ভাষা',
-    'lang.soon': 'শুধু ইন্টারফেস',
 
     'home.eyebrow': 'এক রবিবার অন্তর একটি জমায়েত',
     'home.orient.gatherings': 'জমায়েত:',
     'home.orient.gatheringsText': 'দলটি এক রবিবার অন্তর মিলিত হয়। সেই বৈঠক থেকে যা বেরিয়ে আসে তা ঋতু ও বিষয় অনুসারে সংকলিত হয়, বছরে চারটি সংখ্যা — তারিখভিত্তিক সংগ্রহশালার চেয়ে বরং ছোট একটি পত্রিকার মতো।',
     'home.orient.materials': 'উপকরণ:',
-    'home.orient.materialsText': 'হাতে বাঁধাই, একটি করে',
-    'home.orient.open': 'উন্মুক্ত',
-    'home.orient.openText': 'যে কেউ একটি বিষয় নিয়ে এলে',
+    'home.orient.materialsText': 'হাতে বাঁধাই',
+    'home.orient.openText': 'যে কেউ বিমূর্ততায় ভাবেন, তাঁর জন্য উন্মুক্ত',
 
     'gatherings.label': 'জমায়েত',
     'gatherings.intro': 'দলটি এক রবিবার অন্তর মিলিত হয়। সেই বৈঠক থেকে যা বেরিয়ে আসে তা ঋতু ও বিষয় অনুসারে সংকলিত হয়, বছরে চারটি সংখ্যা।',
@@ -306,7 +297,7 @@ const STRINGS = {
     'nb.colourNote': 'এই ঋতুর রং নেওয়া হয়েছে ইয়ালিমের হাতে বানানো একটি খাতা থেকে, আর সেই খাতার রং এসেছে আঙ্কারার ৩ কাতিপ চেলেবি স্ট্রিট থেকে, যে বাড়িতে NOM আতোলিয়ে উঠে এসেছিল।',
     'nb.hint': 'নিচের কোণা টানুন, বা বোতাম ব্যবহার করুন।',
 
-    'footer.line': 'স্পন্দন ঘোষণা করা হয় না, অনুভব করা হয় · আঙ্কারায় শুরু, সিরাকিউজে চলমান'
+    'footer.question': 'বিমূর্ত ভাবনা কি বস্তুগতভাবে সেতু গড়তে পারে?'
   }
 };
 
