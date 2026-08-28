@@ -1,60 +1,87 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Issue 1, Summer 2026: The Poetics of Relationality — Pulse</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400&family=IBM+Plex+Mono:wght@400;500&family=Noto+Nastaliq+Urdu:wght@400;500&family=Noto+Serif+Bengali:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../style.css">
 </head>
-<!-- The season class is what colours this issue: the tick dividers, the
-     band under the title, the issue number. Nothing else changes. -->
-<body class="season-summer-2026">
+<body>
+
+<div class="spine" aria-hidden="true"></div>
 
 <header>
   <div class="wrap header-row">
     <div class="brand">
-      <svg class="mark" viewBox="0 0 64 32" width="62" height="30" aria-hidden="true" focusable="false"><g fill="none" stroke-linecap="round"><path d="M0 16 q10.67 -5 21.33 0 t21.33 0 t21.33 0" stroke="#9d041a" stroke-width="2.6" opacity=".8"/><path d="M0 16 q8 8 16 0 t16 0 t16 0 t16 0" stroke="#d3814f" stroke-width="2" opacity=".9"/><path d="M0 16 q8 -11 16 0 t16 0 t16 0 t16 0" stroke="#dca91d" stroke-width="1.6"/></g></svg>
       <div class="wordmark"><a href="../index.html">Pulse</a></div>
+      <svg class="mark" viewBox="0 0 64 32" width="62" height="30" aria-hidden="true" focusable="false"><g fill="none" stroke-linecap="round"><path d="M0 16 q10.67 -5 21.33 0 t21.33 0 t21.33 0" stroke="#9d041a" stroke-width="2.6" opacity=".8"/><path d="M0 16 q8 8 16 0 t16 0 t16 0 t16 0" stroke="#d3814f" stroke-width="2" opacity=".9"/><path d="M0 16 q8 -11 16 0 t16 0 t16 0 t16 0" stroke="#dca91d" stroke-width="1.6"/></g></svg>
     </div>
-    <nav>
-      <a href="../gatherings.html">Gatherings</a>
-      <a href="../index.html#materials">Materials</a>
-      <a href="../index.html#colophon">Collaborators</a>
-    </nav>
+
+    <div class="header-right">
+      <nav class="tabs">
+        <a class="tab" href="../index.html#gatherings" data-i18n="tab.gatherings">Gatherings</a>
+        <a class="tab" href="../index.html#materials" data-i18n="tab.materials">Materials</a>
+        <a class="tab" href="../index.html#colophon" data-i18n="tab.collaborators">Collaborators</a>
+      </nav>
+
+      <div class="lang-wrap">
+        <button class="lang-btn" aria-expanded="false" aria-haspopup="true" data-i18n-aria="lang.button" aria-label="Language">
+          <i></i><i></i><i></i>
+        </button>
+        <div class="lang-menu" hidden>
+          <button data-lang="en"><span>English</span></button>
+          <button data-lang="tr"><span>Türkçe</span></button>
+          <button data-lang="ur"><span>اردو</span></button>
+          <button data-lang="bn"><span>বাংলা</span></button>
+        </div>
+      </div>
+    </div>
   </div>
 </header>
 
 <main class="wrap">
 
   <section class="issue-head">
-    <a class="back-link" href="../gatherings.html">&larr; All issues</a>
+    <a class="back-link" href="../index.html#gatherings" data-i18n="gatherings.label">Gatherings</a>
     <div class="issue-band"></div>
-    <p class="issue-no">Issue 1 &nbsp;&middot;&nbsp; Summer 2026</p>
-    <h1>The Poetics of Relationality</h1>
-    <p class="issue-dates">June &ndash; August 2026 &nbsp;&middot;&nbsp; gatherings every other Sunday</p>
-    <p class="section-intro">The season's colour is taken from a notebook Yalım made by hand, whose own colour came from 3 Katip Çelebi Sk., the Ankara building the NOM Atölye workshop moved into.</p>
+    <p class="issue-no" data-i18n="nb.issueNo">Issue 1 · Summer 2026</p>
+    <h1 data-i18n="nb.issueTitle">The Poetics of Relationality</h1>
+    <p class="issue-dates" data-i18n="nb.issueDates">June – August 2026 · gatherings every other Sunday</p>
+    <p class="section-intro" data-i18n="nb.colourNote">The season's colour is taken from a notebook Yalım made by hand, whose own colour came from 3 Katip Çelebi Sk., the Ankara building the NOM Atölye workshop moved into.</p>
   </section>
 
   <div class="pulse-rule"></div>
 
-  <!-- ############# JUNE AND JULY ############# -->
-  <div class="pending">June and July are not here yet. Both are part of this issue and will be added once the material is delivered.</div>
+  <div class="pending" data-i18n="nb.pending">June and July are not here yet. Both are part of this issue and will be added once the material is delivered.</div>
 
-  <div class="pulse-rule"></div>
+  <!-- ===================== THE NOTEBOOK =====================
+       One poem to a page. Pages are named by first line in the
+       navigation, not by number — which is how an untitled poem is
+       cited anyway, and why the first poem needs no title assigned.
 
-  <!-- ############# AUGUST ############# -->
+       Order: the originals first, in the order they were written,
+       then translations at the back in the same order. A translation
+       is never interleaved with the originals.
 
-  <!-- Untitled. "Sözcükler" was assigned in an earlier session and was
-       never Kaan's title, so it carries none. Referred to by first line,
-       which is how untitled poems are cited anyway. The id below is a
-       technical identifier, not a title, and stays so links keep working. -->
-  <article class="gathering" id="sozcukler">
-    <div class="languages">
-      <div class="lang-block" lang="tr">
-        <span class="lang-tag">Türkçe</span>
+       Every page is in this file. If notebook.js does not run, all
+       three poems are simply here one after another.
+       ======================================================== -->
+  <div class="leaf-nav">
+    <button data-leaf-prev data-i18n="nb.prev">← Previous</button>
+    <span class="leaf-where"></span>
+    <button data-leaf-next data-i18n="nb.next">Next →</button>
+  </div>
+
+  <div class="notebook">
+
+    <!-- Untitled. "Sözcükler" was assigned in an earlier session and
+         was never Kaan's title, so this poem carries none. The id is a
+         technical identifier, not a title, kept so links still work. -->
+    <article class="leaf" id="sozcukler" data-first-line="Buraya birkaç sözcük bırakıyorum">
+      <div class="lang-block" lang="tr" dir="ltr">
         <p>Buraya birkaç sözcük bırakıyorum
 Çünkü, benim değil sözcükler
 Havalandırıyorum onları, ya da
@@ -96,20 +123,16 @@ Bu sözcükler döküldü buralara
 Birazdan toplarım, buradan da
 Bir şey eksilmez</p>
       </div>
-    </div>
+      <div class="g-credit">Kaan, NOM, 09.08.2026</div>
+      <div class="corner" role="button" tabindex="-1" aria-hidden="true"></div>
+    </article>
 
-    <div class="g-credit">Kaan, NOM, 09.08.2026</div>
-  </article>
-
-  <!-- This one keeps its heading: Karanlıkta is the poet's own title,
-       from his own document. One titled poem beside one untitled poem
-       is ordinary in poetry, not an inconsistency to iron out. -->
-  <article class="gathering" id="karanlikta">
-    <h2>KARANLIKTA</h2>
-
-    <div class="languages">
-      <div class="lang-block" lang="tr">
-        <span class="lang-tag">Türkçe</span>
+    <!-- This one keeps its heading. KARANLIKTA is the poet's own title,
+         in capitals as he wrote it in his own document. One titled poem
+         beside one untitled poem is ordinary in poetry. -->
+    <article class="leaf" id="karanlikta" data-first-line="KARANLIKTA" hidden>
+      <h2>KARANLIKTA</h2>
+      <div class="lang-block" lang="tr" dir="ltr">
         <p>Sessizlikle susku arasında hayvan çığlıkları
 Etim çekiliyor bir gecenin görünmezine
 Göğü adımlarca yürümek karanlıkta
@@ -125,29 +148,19 @@ dişlerimi geçiriyorum bir geçenin etine
 Yutuyorum duyduğum her sözcüğü,
 kemiği tükürüyorum</p>
       </div>
-    </div>
+      <div class="g-credit">Kaan, NOM, 23.08.2026</div>
+      <div class="corner" role="button" tabindex="-1" aria-hidden="true"></div>
+    </article>
 
-    <div class="g-credit">Kaan, NOM, 23.08.2026</div>
-  </article>
+    <!-- TRANSLATION, at the back of the run. English of the first poem.
 
-  <!-- ############# TRANSLATIONS #############
-       Translations sit at the back of the issue, after all the
-       originals, in the same order the originals run — never
-       interleaved with them. This is the English of the first poem,
-       the one beginning "Buraya birkaç sözcük bırakıyorum".
-
-       ELEVEN LINES BEGIN IN LOWER CASE ON PURPOSE. Do not "fix" the
-       capitalisation and do not join those lines to the one above.
-       Collapsing a deliberate lower-case opening into the previous
-       line is exactly the error that turned Karanlıkta's 14 lines
-       into 10. -->
-
-  <div class="pulse-rule"></div>
-
-  <article class="gathering" id="sozcukler-en">
-    <div class="languages">
-      <div class="lang-block" lang="en">
-        <span class="lang-tag">English</span>
+         TWELVE LINES BEGIN IN LOWER CASE ON PURPOSE. Do not "fix" the
+         capitalisation and do not join those lines to the one above.
+         That inference is exactly what collapsed KARANLIKTA's 14 lines
+         into 10 in an earlier pass. -->
+    <article class="leaf" id="sozcukler-en" data-first-line="I leave a few words here" hidden>
+      <div class="lang-block" lang="en" dir="ltr">
+        <span class="lang-tag" data-i18n="nb.translation">translation</span>
         <p>I leave a few words here
 because the words are not mine
 I air them out, or
@@ -189,19 +202,29 @@ These words spilled here, to this place
 I'll gather them soon, from here too
 Nothing is diminished</p>
       </div>
-    </div>
+      <div class="g-credit">Kaan, NOM, 09.08.2026</div>
+      <div class="corner" role="button" tabindex="-1" aria-hidden="true"></div>
+    </article>
 
-    <div class="g-credit">Kaan, NOM, 09.08.2026</div>
-  </article>
+  </div>
+
+  <ul class="leaf-index">
+    <li><button>Buraya birkaç sözcük bırakıyorum <span class="kind" data-i18n="nb.original">original</span></button></li>
+    <li><button>KARANLIKTA <span class="kind" data-i18n="nb.original">original</span></button></li>
+    <li><button>I leave a few words here <span class="kind" data-i18n="nb.translation">translation</span></button></li>
+  </ul>
 
 </main>
 
 <footer>
-  <div class="wrap">
+  <div class="wrap" data-i18n="footer.line">
     a pulse is felt, not announced &nbsp;&middot;&nbsp; est. Ankara, kept up in Syracuse
   </div>
 </footer>
 
+<script src="../i18n.js"></script>
+<script src="../site.js"></script>
+<script src="../notebook.js"></script>
 <script src="../pulse.js"></script>
 </body>
 </html>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,141 +11,173 @@
 </head>
 <body>
 
+<!-- The stitched spine of one of Yalım's notebooks, run down the left
+     edge of the page. This is where the deep red is finally legible:
+     it carries no text, so the contrast floor does not apply. -->
+<div class="spine" aria-hidden="true"></div>
+
 <header>
   <div class="wrap header-row">
     <div class="brand">
+      <div class="wordmark"><a href="#" data-go-home>Pulse</a></div>
       <svg class="mark" viewBox="0 0 64 32" width="62" height="30" aria-hidden="true" focusable="false"><g fill="none" stroke-linecap="round"><path d="M0 16 q10.67 -5 21.33 0 t21.33 0 t21.33 0" stroke="#9d041a" stroke-width="2.6" opacity=".8"/><path d="M0 16 q8 8 16 0 t16 0 t16 0 t16 0" stroke="#d3814f" stroke-width="2" opacity=".9"/><path d="M0 16 q8 -11 16 0 t16 0 t16 0 t16 0" stroke="#dca91d" stroke-width="1.6"/></g></svg>
-      <div class="wordmark"><a href="index.html">Pulse</a></div>
     </div>
-    <nav>
-      <a href="gatherings.html">Gatherings</a>
-      <a href="#materials">Materials</a>
-      <a href="#colophon">Collaborators</a>
-    </nav>
+
+    <div class="header-right">
+      <nav class="tabs" role="tablist">
+        <button class="tab" role="tab" data-panel="gatherings" data-i18n="tab.gatherings">Gatherings</button>
+        <button class="tab" role="tab" data-panel="materials" data-i18n="tab.materials">Materials</button>
+        <button class="tab" role="tab" data-panel="collaborators" data-i18n="tab.collaborators">Collaborators</button>
+      </nav>
+
+      <div class="lang-wrap">
+        <button class="lang-btn" aria-expanded="false" aria-haspopup="true" data-i18n-aria="lang.button" aria-label="Language">
+          <i></i><i></i><i></i>
+        </button>
+        <!-- Interface only. There is no poem key anywhere in i18n.js. -->
+        <div class="lang-menu" hidden>
+          <button data-lang="en"><span>English</span></button>
+          <button data-lang="tr"><span>Türkçe</span></button>
+          <button data-lang="ur"><span>اردو</span></button>
+          <button data-lang="bn"><span>বাংলা</span></button>
+        </div>
+      </div>
+    </div>
   </div>
 </header>
 
 <main class="wrap">
 
-  <section class="hero">
-    <p class="eyebrow">A gathering, roughly every other Sunday</p>
+  <!-- ============================== HOME ============================== -->
+  <section class="panel" data-panel="home">
+    <div class="hero">
+      <p class="eyebrow" data-i18n="home.eyebrow">A gathering, roughly every other Sunday</p>
 
-    <!-- ###########################################################
-         THE OPENING POEM. Five lines, both languages together, always.
-         This is a poem, so the language menu must never swap one of
-         these for the other. The English is a working draft and can
-         still change.
-         ########################################################### -->
-    <div class="opening-poem">
-      <div lang="tr">
-        <span class="op-tag">Türkçe</span>
-        <p>Buraya birkaç sözcük bırakıyorum
+      <!-- THE OPENING POEM. Both languages, permanently, side by side.
+           No data-i18n anywhere in here: the language menu must never
+           be able to swap one of these for the other. -->
+      <div class="opening-poem">
+        <div lang="tr" dir="ltr">
+          <span class="op-tag">Türkçe</span>
+          <p>Buraya birkaç sözcük bırakıyorum
 Çünkü, benim değil sözcükler
 Havalandırıyorum onları, ya da
 Bir alıcısı çıkar belki
 Peki, alan ne yapar?</p>
-      </div>
-      <div lang="en">
-        <span class="op-tag">English</span>
-        <p>I leave a few words here
+        </div>
+        <div lang="en" dir="ltr">
+          <span class="op-tag">English</span>
+          <p>I leave a few words here
 because the words are not mine
 I air them out, or
 maybe a taker will take them
 Well, what does the taker do?</p>
+        </div>
       </div>
+      <p class="opening-attr">Kaan, NOM, 09.08.2026</p>
+
+      <!-- A Turkish version of this paragraph is still to be written by
+           the group rather than translated mechanically, so it has no
+           i18n key yet and stays in English in every language. -->
+      <p class="lede">Our meetings sparked from the idea of "poetics of relationality," and this relationality is represented by the "bridge" we hope to make with people originating from different cities, and writing about everyday life. The idea of "bridge" as an abstract but also a material concept came out of a conversation about whether these gatherings would even matter. We believe there's something quietly fitting about an act of connecting. So, rather than saying "this happened by accident," we hope to build bridges that formally enact future accidental connections through abstractions/concepts/themes/terms.</p>
+
+      <p class="meta-line"><b data-i18n="home.orient.gatherings">Gatherings:</b> <span data-i18n="home.orient.gatheringsText">The group meets every other Sunday. What comes out of those meetings is gathered by season and theme, four issues a year, closer to a small magazine than a dated archive.</span> &nbsp;·&nbsp; <b data-i18n="home.orient.materials">Materials:</b> <span data-i18n="home.orient.materialsText">hand-bound, one at a time</span> &nbsp;·&nbsp; <b data-i18n="home.orient.open">Open</b> <span data-i18n="home.orient.openText">to anyone who shows up with a theme</span></p>
     </div>
-    <p class="opening-attr">Kaan, NOM, 09.08.2026</p>
-
-    <!-- ###########################################################
-         OPENING TEXT. A Turkish version of this paragraph is still
-         to be written by the group, not translated mechanically.
-         ########################################################### -->
-    <p class="lede">Our meetings sparked from the idea of "poetics of relationality," and this relationality is represented by the "bridge" we hope to make with people originating from different cities, and writing about everyday life. The idea of "bridge" as an abstract but also a material concept came out of a conversation about whether these gatherings would even matter. We believe there's something quietly fitting about an act of connecting. So, rather than saying "this happened by accident," we hope to build bridges that formally enact future accidental connections through abstractions/concepts/themes/terms.</p>
-
-    <p class="meta-line"><b>Gatherings:</b> The group meets every other Sunday. What comes out of those meetings is gathered by season and theme, four issues a year, closer to a small magazine than a dated archive. &nbsp;·&nbsp; <b>Materials:</b> hand-bound, one at a time &nbsp;·&nbsp; <b>Open</b> to anyone who shows up with a theme</p>
   </section>
 
-  <div class="pulse-rule"></div>
+  <!-- =========================== GATHERINGS =========================== -->
+  <section class="panel" data-panel="gatherings" hidden>
+    <p class="section-label" data-i18n="gatherings.label">Gatherings</p>
+    <p class="section-intro" data-i18n="gatherings.intro">The group meets every other Sunday. What comes out of those meetings is gathered by season and theme, four issues a year, closer to a small magazine than a dated archive.</p>
 
-  <section id="materials">
-    <p class="section-label">Materials</p>
-    <p class="section-intro">Some of what gets written finds its way out of the abstract and into someone's hands: bound, printed, built. Most of this takes physical shape at <a href="https://www.instagram.com/nomatolye/" target="_blank" rel="noopener">NOM Atölye</a> in Ankara, who keep <a href="https://www.shopier.com/nomatolye/" target="_blank" rel="noopener">a shop of their own</a>. Made one at a time, not stocked, so ask before it's gone.</p>
+    <div class="issue-item">
+      <div class="swatch-row">
+        <i style="background:#dca91d"></i>
+        <i style="background:#d3814f"></i>
+        <i style="background:#9d041a"></i>
+      </div>
+      <p class="a-meta" data-i18n="gatherings.issue1meta">Issue 1 · Summer 2026 · June – August</p>
+      <h2><a href="issues/summer-2026.html" data-i18n="gatherings.issue1title">The Poetics of Relationality</a></h2>
+      <p class="a-note" data-i18n="gatherings.issue1note">Two poems by Kaan Gürgan, and the English translation of the first. June and July still to come.</p>
+      <p class="after-issues"><a class="more-link" href="issues/summer-2026.html" data-i18n="gatherings.open">Open this issue →</a></p>
+    </div>
+  </section>
+
+  <!-- =========================== MATERIALS ============================ -->
+  <section class="panel" data-panel="materials" hidden>
+    <p class="section-label" data-i18n="materials.label">Materials</p>
+    <p class="section-intro"><span data-i18n="materials.intro1">Some of what gets written finds its way out of the abstract and into someone's hands: bound, printed, built. Most of this takes physical shape at</span> <a href="https://www.instagram.com/nomatolye/" target="_blank" rel="noopener">NOM Atölye</a> <span data-i18n="materials.intro2">in Ankara, who keep</span> <a href="https://www.shopier.com/nomatolye/" target="_blank" rel="noopener" data-i18n="materials.shopLink">a shop of their own</a>. <span data-i18n="materials.intro3">Made one at a time, not stocked, so ask before it's gone.</span></p>
 
     <div class="objects-grid">
       <div class="object-card">
         <!-- PHOTO GOES HERE. Save the notebook image into the images
              folder, then ask Claude to swap the swatch line below for
-             the real picture. It needs alt text describing what is in
-             the photograph, for anyone using a screen reader. -->
-        <div class="object-swatch">Yalım Ardıç, NOM Atölye &mdash; photo goes here</div>
-        <h3>Hand-bound gathering, Vol. I</h3>
-        <p>Coptic-stitched, hand marbled cover. One of a small run.</p>
-        <!-- NOM sell their own work through Shopier, so this goes straight
-             there rather than through an inquiry email -->
-        <a class="inquire" href="https://www.shopier.com/nomatolye/" target="_blank" rel="noopener">In NOM's shop &rarr;</a>
+             the real picture, with alt text. -->
+        <div class="object-swatch" data-i18n="materials.photo1">Yalım Ardıç, NOM Atölye — photo goes here</div>
+        <h3 data-i18n="materials.card1title">Hand-bound gathering, Vol. I</h3>
+        <p data-i18n="materials.card1text">Coptic-stitched, hand marbled cover. One of a small run.</p>
+        <a class="inquire" href="https://www.shopier.com/nomatolye/" target="_blank" rel="noopener" data-i18n="materials.card1link">In NOM's shop →</a>
       </div>
       <div class="object-card">
-        <div class="object-swatch">art collaborator's piece &mdash; photo goes here</div>
-        <h3>[ piece title ]</h3>
-        <p>[ short line on medium and what it responds to ]</p>
-        <!-- Pieces that aren't NOM's have no shop of their own, so they are
-             asked after by email. Use this same address for any future
-             non-NOM collaborator's card. -->
-        <a class="inquire" href="mailto:poeticalbridge@gmail.com?subject=Pulse%20inquiry">Inquire &rarr;</a>
+        <div class="object-swatch" data-i18n="materials.photo2">art collaborator's piece — photo goes here</div>
+        <h3 data-i18n="materials.card2title">[ piece title ]</h3>
+        <p data-i18n="materials.card2text">[ short line on medium and what it responds to ]</p>
+        <a class="inquire" href="mailto:poeticalbridge@gmail.com?subject=Pulse%20inquiry" data-i18n="materials.inquire">Inquire →</a>
       </div>
     </div>
   </section>
 
-  <div class="pulse-rule"></div>
-
-  <section id="colophon" class="colophon">
-    <p class="section-label">Colophon</p>
+  <!-- ========================= COLLABORATORS ========================== -->
+  <section class="panel colophon" data-panel="collaborators" hidden>
+    <p class="section-label" data-i18n="colophon.label">Colophon</p>
     <div class="roles">
       <div class="role-row">
-        <span class="role">Poetics of relationality</span>
-        <span class="who">Natalie Gallagher, Detroit <span>— gives us the words that connect our diversified abstract thoughts</span></span>
+        <span class="role" data-i18n="colophon.role1">Poetics of relationality</span>
+        <span class="who">Natalie Gallagher, Detroit <span>— <span data-i18n="colophon.who1">gives us the words that connect our diversified abstract thoughts</span></span></span>
       </div>
       <div class="role-row">
-        <span class="role">The Bridge</span>
-        <span class="who">Hakkı Ozan Karayiğit <span>— tries to bridge those diversified abstractions</span></span>
+        <span class="role" data-i18n="colophon.role2">The Bridge</span>
+        <span class="who">Hakkı Ozan Karayiğit <span>— <span data-i18n="colophon.who2">tries to bridge those diversified abstractions</span></span></span>
       </div>
       <div class="role-row">
-        <span class="role">Materiality of bridging</span>
-        <span class="who">Yalım Ardıç, NOM Atölye <span>— materializes the abstract words onto notebooks he designs and makes by hand</span></span>
+        <span class="role" data-i18n="colophon.role3">Materiality of bridging</span>
+        <span class="who">Yalım Ardıç, NOM Atölye <span>— <span data-i18n="colophon.who3">materializes the abstract words onto notebooks he designs and makes by hand</span></span></span>
       </div>
     </div>
 
     <div class="group-block">
-      <p class="group-label">Ankara / Türkiye &mdash; base</p>
+      <p class="group-label" data-i18n="roster.ankara">Ankara / Türkiye — base</p>
       <p class="person">Yalım Ardıç</p>
       <p class="person">Kaan Gürgan</p>
       <p class="person">İrem Soyka</p>
     </div>
 
     <div class="group-block">
-      <p class="group-label">Syracuse / NY</p>
-      <p class="person">Auwn Gurmani <span>— PhD student in Geography</span></p>
-      <p class="person">Avia Nahreen <span>— PhD candidate in Geography</span></p>
+      <p class="group-label" data-i18n="roster.syracuse">Syracuse / NY</p>
+      <p class="person">Auwn Gurmani <span>— <span data-i18n="roster.phdStudent">PhD student in Geography</span></span></p>
+      <p class="person">Avia Nahreen <span>— <span data-i18n="roster.phdCandidate">PhD candidate in Geography</span></span></p>
     </div>
 
     <div class="group-block">
-      <p class="group-label">Collaborators</p>
-      <p class="person">Mustafa Gürkan Gürler <span>— 2D animation</span></p>
-      <p class="person">İrem Gözü <span>— painting</span></p>
-      <p class="person">Ali Baran Seydioğulları <span>— sculpture</span></p>
-      <p class="person">Kevin Thompson <span>— paper engineering; Penfield, NY, SUNY College of Environmental Science and Forestry</span></p>
-      <p class="person"><span>Two incoming MFA poets, Creative Writing, Syracuse — names to come</span></p>
+      <p class="group-label" data-i18n="roster.collaborators">Collaborators</p>
+      <p class="person">Mustafa Gürkan Gürler <span>— <span data-i18n="roster.animation">2D animation</span></span></p>
+      <p class="person">İrem Gözü <span>— <span data-i18n="roster.painting">painting</span></span></p>
+      <p class="person">Ali Baran Seydioğulları <span>— <span data-i18n="roster.sculpture">sculpture</span></span></p>
+      <p class="person">Kevin Thompson <span>— <span data-i18n="roster.paper">paper engineering; Penfield, NY, SUNY College of Environmental Science and Forestry</span></span></p>
+      <p class="person"><span data-i18n="roster.mfa">Two incoming MFA poets, Creative Writing, Syracuse — names to come</span></p>
     </div>
   </section>
 
 </main>
 
 <footer>
-  <div class="wrap">
+  <div class="wrap" data-i18n="footer.line">
     a pulse is felt, not announced &nbsp;&middot;&nbsp; est. Ankara, kept up in Syracuse
   </div>
 </footer>
 
+<script src="i18n.js"></script>
+<script src="site.js"></script>
 <script src="pulse.js"></script>
 </body>
 </html>
